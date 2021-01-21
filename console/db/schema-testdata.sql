@@ -13,7 +13,8 @@ INSERT INTO security_answers (question_id, user_id, answer) VALUES
 (1, 3,'answer1'), (5, 3,'answer2'), (9, 3,'answer3'),
 (1, 4,'answer1'), (5, 4,'answer2'), (9, 4,'answer3'),
 (1, 5,'answer1'), (5, 5,'answer2'), (9, 5,'answer3'),
-(1, 6,'answer1'), (5, 6,'answer2'), (9, 6,'answer3');
+(1, 6,'answer1'), (5, 6,'answer2'), (9, 6,'answer3'),
+(1, 1,'john doe'),(5, 1,'pizzaparadise'),(9, 1,'petone');
 
 
 INSERT INTO sessions (creator_id, name) VALUES (2, "Test Study 1 - P037");      -- session_id: 1
@@ -27,8 +28,3 @@ INSERT INTO entries (session_id, creator_id, value) VALUES (1, 5, "Entry 1-3"); 
 INSERT INTO entries (session_id, creator_id, value) VALUES (2, 2, "Entry 2-3");       -- entry_id: 6
 INSERT INTO entries (session_id, creator_id, value) VALUES (1, 4, "Entry 1-4");       -- entry_id: 7
 INSERT INTO entries (session_id, creator_id, value) VALUES (1, 6, "Entry 1-5");       -- entry_id: 8
-
-INSERT INTO security_answers (answer_id, question_id, user_id, answer) VALUES
-            (1, 1, 1,'john doe'),
-            (2, 5, 1,'pizzaparadise'),
-            (3, 9, 1,'petone');

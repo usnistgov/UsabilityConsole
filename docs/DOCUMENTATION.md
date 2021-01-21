@@ -140,7 +140,7 @@ Note: `flask_session` refers to the WSGI/Flask session while `session` refers to
 ## Web Browser Endpoints
 | Endpoint | Method | Status | Description |
 |:---:|:---:|:---:|:---|
-|`/`| GET | P | Displays the homepage of the Usability Console |
+|`/`| GET | C | Displays the homepage of the Usability Console |
 |`/login`| GET | C | Displays the form to login |
 |`/login`| POST | C | Parses information and authenticates user |
 |`/logout`| ***GET??*** | C | Logs current user out |

@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{ fontawesome_html() }}
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+   <script>
+        // {% block javascript %}
+        function passwordForgotten(element, category) {
+        // location.reload();
+        document.location.href = '/questions';
+        return false;
+    }
+
+        function delete_flash(flash){
+        $(flash).parent().remove()
+    }
+    // {% endblock %}
+   </script>
+    <style>
+        {% block css_styles %} {% endblock %}
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+        
+        .currentTab {
+            text-decoration:none; 
+            font-weight:bold; 
+            color: black;
+        }
+
+        #display {
+            width: 1536px;
+            height: 2048px;
+            border-color: black;
+            border-width: thin;
+            border-style: solid;
+            margin: auto;
+        }
+
+        #header {
+            width: 100%;
+            text-align: initial;
+            height: 167px;
+            line-height: 67px;
+
+            background-color: navy;
+            background-image: linear-gradient(to right, rgb(25, 105, 151), rgb(32, 64, 112), rgb(25, 105, 151));
+            vertical-align: middle;
+            font-weight: bold;
+            color: white;
+            font-size: 2.5em;
+
+            padding-top: 33px;
+            padding-bottom: 33px;
+        }
+
+        #header-logo {
+            height: 66px;
+            margin-right: 33px;
+            float: right;
+        }
+
+        #header-text {
+            padding-left: 33px;
+
+        }
+
+        a.nostyle:link {
+            text-decoration: inherit;
+            color: inherit;
+        }
+
+        a.nostyle:visited {
+            text-decoration: inherit;
+            color: inherit;
+        }
+
+        span.error {
+            font-weight: bold;
+            font-size: 42px;
+            padding: 30px;
+            margin-left: 5%;
+        }
+
+        span.success {
+            font-weight: bold;
+            font-size: 42px;
+            padding: 30px;
+            margin-left: 5%;
+        }
+
+        span.flash {
+            font-weight: bold;
+            font-size: 42px;
+            /* padding: 30px; */
+            margin-left: 5%;
+        }
+
+        button.flash {
+            font-weight: bold;
+            font-size: 42px;
+            /* padding: 30px; */
+            margin-left: 5%;
+        }
+
+        span.warning {
+            background-color: #ffff66;
+            font-weight: bold;
+        }
+
+        span.info {
+            background-color: #99ccff;
+        }
+
+        div.flashalert {
+            position: relative;
+            padding: .75rem 1.25rem;
+            border: 1px solid transparent;
+            border-radius: .25rem;
+        }   
+
+        .centered {
+            margin: auto;
+        }
+
+        .small {
+            font-size: 0.8em;
+        }
+
+        .large {
+            font-size: 1.5em;
+        }
+
+        .extra-large {
+            font-size: 2em;
+        }
+
+        .subheader {
+            background-color: LightGray;
+            color: black;
+
+            font-size: x-large;
+
+            height: auto;
+            width: 100%;
+            line-height: 3em;
+            vertical-align: middle;
+            padding-top: 0.1em;
+            padding-bottom: 0.1em;
+            display: inline-block;
+        }
+        .subheader-info {
+            float: left;
+            text-align: left;
+            width: 60%;
+            overflow-wrap: break-word;
+            font-size:xx-large
+        }
+
+        .subheader-info a {
+            padding-left: 20px;
+        }
+
+        .subheader-options {
+            float: right;
+            text-align: right;
+            width: 40%;
+            font-size:xx-large
+        }
+        .subheader-options a {
+            padding-right: 20px;
+        }
+
+        .modal {
+  background-color:rgba(180, 180, 180, 0.60)
+        }
+        .modal-header,  .modal-footer {
+            background-color:#003366;
+            color: white;
+        }
+
+        .modal-dialog {
+  width: 90em;
+  height: 40%;
+  padding: 30px;
+  padding-top:40%;
+}
+
+.modal-content {
+  height: auto;
+  min-height: 90%;
+  border-radius: 0;
+}
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.clickable {
+    cursor: pointer;
+}
+        
+    </style>
+</head>
+
+
+
+<body>
+
+    <script>
+        window.onload = function(){
+            var url = document.location.href
+            if(url.includes("settings")) {
+                var tab = document.getElementById('settingsTab');
+                tab.className = 'currentTab'
+                }
+            else if (url.includes("viewall")) {
+                var tab = document.getElementById('homeTab');
+                tab.className = 'currentTab'
+                }
+            }
+
+            function passwordForgotten(element, category) {
+        // location.reload();
+        document.location.href = '/questions';
+        return false;
+    }
+
+    function delete_flash(flash){
+        $(flash).parent().remove()
+    }
+    </script>
+
+    <div id="display">
+        <div id="header">
+            <img id="header-logo" src="/static/nist_logo.png" />
+            <span id="header-text" ><a class="nostyle" href="/">Usability Console</a></span>
+        </div>
+        <div class = "subheader">
+            <span class ="subheader-info">
+{% if g.current_session_id %}
+    {% if request.path.startswith('/session/console') %}
+                <a href="/session/view/{{ g.current_session_id }}">View Entries: {{ g.current_session_name }}</a>
+    {% elif not (request.path.startswith('/session/viewall')) %}
+                <a href="/session/console">Return to session: {{ g.current_session_name }}</a>
+    {% endif %}
+{% endif %}
+</span>
+            <span class="subheader-options">
+                <a id="homeTab" href="/session/viewall"> <i class="fas fa-home"></i>
+                </a>
+                {% if g.flask_session['user_id'] %}
+                    |   <a id="settingsTab" href="/settings" style=" margin-left: 10px;">
+                        <i class="fas fa-user-cog"></i>
+                    </a> | <a id="logoutTab" href="/logout" style=" margin-left: 10px;">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </a>
+                {% else %}
+                    {% if request.path != '/register' %}
+                    |   <a id="registerTab" href="/register" style=" margin-left: 10px;">
+                        <i class="fas fa-user-plus"></i>
+                    </a>
+                    {% endif %}
+                    {% if request.path != '/login' %}
+                    |   <a href="#" data-toggle="modal" data-target="#myOutput" data-backdrop="false" style=" margin-left: 15px;" >
+                        <i class="fas fa-sign-in-alt"></i>
+                    </a>
+                    {% endif %}
+                {% endif %}
+            </span>
+        </div>
+        <div id="content">
+            {% if error_message %}
+            <div class="alert alert-danger" style="height: 130px;">
+            <span class="error">
+                <span style="font-size: 60px; vertical-align: middle; display: inline; margin-right: 35px" >
+                    <i class="fas fa-times"></i>
+                </span>
+            {{ error_message }}
+        </span>
+    </div>
+            {% endif %}
+
+
+
+            {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+            {% for category, message in messages %}
+                <div class="flashalert alert-{{ category }} alert-dismissible fade show" role="alert">
+                    <span class="flash" >{{ message }}</span>
+                    <button type="button" class="flash close" data-dismiss="alert" aria-label="Close" onclick=delete_flash(this)>
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+            {% if success_message %}
+            <div class="alert alert-success">
+            <span class="success">
+                <span style="font-size: 60px; vertical-align: middle; display: inline; margin-right: 35px">
+                    <i class="fas fa-check-circle"></i>
+                </span>
+                {% for mesg in get_flashed_messages() %}
+                <h1>{{ mesg }}</h1>
+                {% endfor %}
+             {{ success_message }}
+            </span>
+        </div>
+            {% endif %}
+            
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+
+    <!-- Modal -->
+  <div class="modal fade" id="myOutput" role="dialog">
+    <div class="modal-dialog modal-lg">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+            <h4 style="font-size:35px;"><i class="fas fa-lock" style="margin-right: 30px; margin-left: 30px;" ></i>  Login</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+            <br /><br />
+                <form action="/session/login" method="POST">
+                <table class="centered" style="text-align: right; font-size: x-large;">
+                    <tr style="margin-bottom: 40px;">
+                        <td><i class="fas fa-user" ></i> <span style="margin-left: 15px;">Username:</span></span></td>
+                        <td><input type="text" name="username" required /></td>
+                    </tr>
+                    <tr style="margin-bottom: 80px;">
+                        <td> <i class="fas fa-eye"></i> <span style="margin-left: 15px;"> Password:</span></td>
+                        <td><input type="password" name="password" required /></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"  >
+                            <input style="width: 100%;" type="submit" value="Login"/>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+
+
+            <button type="button" class="btn btn-default" data-dismiss="modal" style="font-size: large; color: darkblue;" onclick="passwordForgotten()">Password forgotten?</button>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal" style="font-size: xx-large; color: white;">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+{% extends 'template.html' %}
+
+{% block javascript %}
+    function confirm_delete(user_id) {
+        username = document.getElementById("user_id_" + user_id).innerText;
+        return confirm("Are you sure you want to delete user '" + username + "'?");
+    }
+
+    function confirm_toggle(user_id, is_admin) {
+        username = document.getElementById("user_id_" + user_id).innerText;
+        if (is_admin) {
+            return confirm("Are you sure you want to remove administrator rights from user '" + username + "'?");
+        } else {
+            return confirm("Are you sure you want to add administrator rights from user '" + username + "'?");
+        }
+
+    }
+{% endblock %}
+
+{% block title %}Usability Console - All Users{% endblock %}
+
+{% block content %}
+<br /><br />
+            <table class="centered" style="width: 48em;font-size:1.5em;">
+                <tr>
+                    <th>Username</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Options</th>
+                </tr>
+            {% for user in users%}
+                <tr>
+                    <td id="user_id_{{ user['user_id'] }}">{{ user['username'] }}</td>
+                    <td>{{ '' if user['first_name'] == None else user['first_name'] }}</td>
+                    <td>{{ '' if user['last_name'] == None else user['last_name'] }}</td>
+                    <td>
+                        {% if user['user_id'] == 1 %}
+                            &mdash;
+                        {% else %}
+                        <a href="/user/delete/{{ user['user_id'] }}" onclick="return confirm_delete({{ user['user_id'] }});">Delete</a>
+                        | <a href="/user/admin/{{ user['user_id'] }}" onclick="return confirm_toggle({{ user['user_id'] }}, {{ user['admin']}});">{{ 'Rekove' if user['admin'] else 'Make' }} Admin</a>
+                        {% endif %}
+                    </td>
+                </tr>
+            {% endfor %}
+            </table>
+{% endblock %}

@@ -1,0 +1,6 @@
+Werkzeug==0.16.1
+Flask
+Flask-Session
+flask_fontawesome
+requests
+

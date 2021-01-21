@@ -1,0 +1,159 @@
+{% extends 'template.html' %}
+
+{% block css_styles %}
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, .5);
+  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+}
+
+.table-container {
+  height: 100em;
+}
+
+/* Flex Table */
+table {
+width: 99%;
+display: flex;
+flex-direction: column;
+height: 90%;
+font-size:x-large; 
+text-align: left;  
+padding-top: 20px
+}
+table thead,
+table tbody {
+display: block;
+}
+table tbody {
+flex: 1;
+overflow-y: scroll;
+}
+table tr {
+width: 100%;
+display: flex;
+}
+table tr td,
+table tr th {
+display: flex;
+flex: 1;
+align-items:center;
+justify-content:left;
+}
+
+.flex-child:nth-of-type(1) {justify-content:center; padding-right:30px }
+.flex-child:nth-of-type(2) { flex-grow: 3; }
+.flex-child:nth-of-type(3) { justify-content:center; }
+.flex-child:nth-of-type(4) { flex-grow: 2; justify-content:center;}
+.flex-child:nth-of-type(5) { flex-grow: 2; justify-content:center;}
+
+body { 
+min-height: 100%;
+min-width: 100% }
+
+{% endblock %}
+
+{% block javascript %}
+    function confirm_delete(session_id) {
+        session_name = document.getElementById("session_id_" + session_id).innerText;
+        return confirm("Are you sure you want to delete session '" + session_name + "'?");
+    }
+{% endblock %}
+
+{% block title %}Usability Console - View Sessions{% endblock %}
+
+{% block content %}
+<head>
+    {{ fontawesome_html() }}
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+<br /><br />
+<div class="large" style="margin-bottom: 30px; text-align: center;"><a href="/session/create">Create New Session</a></div>
+
+<br />
+{{ g.message }}
+<div class="table-container"  style="margin-top: 30px; margin-left: 60px;">
+  <table>   
+  <thead>
+      <tr>
+          <th class="flex-child">Session ID</th>
+          <th class="flex-child" >Name</th>
+          <th class="flex-child" >Options</th>
+          <th class="flex-child" >Time created</th>
+          <th class="flex-child" >Last modified</th>
+      </tr>
+  
+  </thead>
+  <tbody>
+    {% for session in sessions %}
+        <tr style=" margin-top: 50px; height: 40px">
+            <td class="flex-child">{{ session['session_id'] }}</td>
+            <td class="flex-child" id="session_id_{{ session['session_id'] }}" style=" word-break: break-all;overflow-wrap: break-word; width: 40%;" >
+              <a href="/session/set/{{ session['session_id'] }}">{{ session['name'] }}</a></td>
+            <td class="flex-child"> {% if session['can_resume'] %}
+              {% set has_previous_option = True %}
+              <a href="/session/select/{{ session['session_id'] }}" style="color: DarkBlue; font-size:35px;"><i class="fas fa-play"></i></a>
+          {% endif %}
+          {% if session['has_control'] %}
+              <a href="/session/delete/{{ session['session_id'] }}" onclick="return confirm_delete({{ session['session_id'] }});" style="color: grey; margin-left: 15%; font-size:35px;"><i class="fas fa-trash"></i></a>
+          {% endif %}</td>
+          <td class="flex-child">{{session['time_created']}}</td>
+          <td class="flex-child">{{session['last_modified']}}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+    </table>
+    </div>
+
+
+
+
+
+<!-- <div class="table-container">
+
+            <table class="centered" style="width: 90%; font-size:x-large; text-align: left; table-layout:fixed; ">
+                <thead>
+                <tr>
+                    <th>Session ID</th>
+                    <th>Name</th>
+                    <th>Options</th>
+                    <th>Time created</th>
+                    <th>Last modified</th>
+                </tr>
+                </thead>
+                <tbody>
+            {% for session in sessions %}
+                <tr  style=" margin-top: 20px; height: 50px">
+                    <td style="width: 15%;" >{{ session['session_id'] }}</td>
+                    <td id="session_id_{{ session['session_id'] }}" style=" word-break: break-all;overflow-wrap: break-word; width: 40%;"><a href="/session/view/{{ session['session_id'] }}">{{ session['name'] }}</a></td>
+                    <td style="width: 20%;"> 
+{% if session['can_resume'] %}
+    {% set has_previous_option = True %}
+    <a href="/session/select/{{ session['session_id'] }}" style="color: DarkBlue; font-size:35px;"><i class="fas fa-play"></i></a>
+{% endif %}
+{% if session['has_control'] %}
+    <a href="/session/delete/{{ session['session_id'] }}" onclick="return confirm_delete({{ session['session_id'] }});" style="color: grey; margin-left: 15%; font-size:35px;"><i class="fas fa-trash"></i></a>
+{% endif %}
+                    </td>
+                    <td style="width: 25%;"> {{session['time_created']}}</td>
+                    <td style="width: 25%;"> {{session['last_modified']}} </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+            </table>
+        </div> -->
+
+  <!-- Bootstrap CSS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+{% endblock %}

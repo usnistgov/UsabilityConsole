@@ -1,0 +1,130 @@
+<!--
+
+https://css-tricks.com/almanac/properties/f/font-size/
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- meta http-equiv="refresh" content="5" /-->
+    <title>Usability Console</title>
+    <script>
+        function button_click(element) {
+
+        }
+
+        function DO_POST(element, url) {
+            const xhttp = new XMLHttpRequest();
+            xhttp.open("POST", url, true);
+            xhttp.send();
+        }
+
+    </script>
+    <style>
+        div.button {
+            width: 350px;
+            height: 100px;
+            line-height: 100px;
+            vertical-align: middle;
+
+            border-color: black;
+            border-width: thin;
+            border-radius: 16px;
+            border-style: solid;
+            font-size: 1.5em;
+            font-weight: bold;
+            margin: 16px;
+        }
+
+        div.button:active {
+            background-color: DimGray;
+            color: white;
+        }
+
+        div.red {
+            /*background-color: maroon;*/
+            background-color: rgb(192, 0, 0);
+            color: white;
+        }
+
+        div.orange {
+            background-color: orange
+        }
+
+        div.yellow {
+            /*background-color: LightGoldenrodYellow;*/
+            /*background-color: Khaki;*/
+            background-color: rgb(255, 255, 128);
+        }
+
+        div.green {
+            background-color: green;
+            color: white;
+        }
+
+        div.blue {
+            background-color: navy;
+            color: white;
+        }
+
+        div.purple {
+            background-color: purple;
+            color: white;
+        }
+
+        div.black {
+            background-color: black;
+            color: white;
+        }
+
+        div.brown {
+            background-color: SaddleBrown;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="display">
+        <div id="header">
+            <img id="header-logo" src="/static/nist_logo.png" />
+            <span id="header-text" >Usability Console</span>
+        </div>
+        <div id="subheader">
+            <a href="/sessions">View Sessions</a> | <a href="/settings">Settings</a> | <a href="/logout">Logout</a>
+        </div>
+
+        <div id="buttons">
+            <div onclick="DO_POST(this, '/session/begin');" class="button">Session Begin</div>
+            <div onclick="DO_POST(this, '/session/end');" class="button">Session End</div>
+
+            <div onclick="button_click(this);" class="button purple">System Lagged</div>
+
+            <div onclick="button_click(this);" class="button blue">User Made Verbal Comment</div>
+            <div onclick="button_click(this);" class="button blue">User Restarted Task</div>
+            <div onclick="button_click(this);" class="button blue">User Hesitated</div>
+
+
+
+            <div onclick="button_click(this);" class="button red">Trigger Large Fire</div>
+            <div onclick="button_click(this);" class="button orange">Trigger Medium Fire</div>
+            <div onclick="button_click(this);" class="button yellow">Trigger Small Fire</div>
+        </div>
+
+        <!-- div id="buttons">
+            <div onclick="DO_POST(this, '/session/begin');" class="button black">Session Begin</div>
+            <div onclick="button_click(this);" class="button brown">..</div>
+            <div onclick="button_click(this);" class="button red">Trigger Large Fire</div>
+            <div onclick="button_click(this);" class="button orange">Trigger Medium Fire</div>
+            <div onclick="button_click(this);" class="button yellow">Trigger Small Fire</div>
+            <div onclick="button_click(this);" class="button green">...</div>
+            <div onclick="button_click(this);" class="button blue">User Made Verbal Comment</div>
+            <div onclick="button_click(this);" class="button blue">User Restarted Task</div>
+            <div onclick="button_click(this);" class="button purple">...</div>
+            <div onclick="DO_POST(this, '/session/end');" class="button">Session End</div>
+        </div -->
+    </div>
+
+</body>
+</html>

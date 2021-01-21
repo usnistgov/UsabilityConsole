@@ -1,0 +1,75 @@
+// https://dbdiagram.io/d/5c58ac623dfd9d0014c43501
+
+Table users {
+  user_id int PK
+  role_id int
+  username varchar
+  password varchar
+  first_name varchar
+  last_name varchar
+  email_address varchar
+  api_key varchar
+  enabled boolean
+}
+
+Table roles {
+  role_id int PK
+  name varchar
+}
+
+Table sessions {
+  session_id int PK
+  session_name varchar
+  creator_id int
+  time_created datetime
+  enabled boolean
+}
+
+Table entries {
+  entry_id int PK
+  session_id int
+  creator_id int
+  time_created datetime
+  value varchar
+  entry_option_id int   //optional, to support free text entries
+  category_id int
+  enabled boolean
+}
+
+Table alerts {
+  alert_id int PK
+  session_id int
+  creator_id int
+  time_created datetime
+  value varchar
+  enabled boolean
+}
+
+Table entry_options {
+  entry_option_id int PK
+  parent_id int
+  category_id int
+  value varchar
+  ordinal int
+  color_class varchar
+  enabled boolean
+}
+
+Table categories {
+  category_id int PK
+  category_name varchar
+  quadrant int
+  enabled boolean
+}
+
+
+Ref: sessions.creator_id > users.user_id
+Ref: alerts.session_id > sessions.session_id
+Ref: alerts.creator_id > users.user_id
+Ref: entries.session_id > sessions.session_id
+Ref: entries.creator_id > users.user_id
+Ref: entries.entry_option_id > entry_options.entry_option_id
+Ref: entries.category_id > categories.category_id
+Ref: entry_options.parent_id > entry_options.entry_option_id
+Ref: entry_options.category_id > categories.category_id
+Ref: users.role_id > roles.role_id

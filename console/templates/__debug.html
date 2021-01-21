@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DEBUG</title>
+</head>
+<body>
+    <center>
+        g Values <small>(session is hidden and enumerated below)</small>:
+        <table style="margin: auto; text-align: center;" border="1">
+                <tr>
+                    <th>Key</th>
+                    <th>Value</th>
+                </tr>
+        {% for key in g if not key=='flask_session'%}
+                <tr>
+                    <td>{{ key }}</td>
+                    <td>{{ g[key] }}</td>
+                </tr>
+        {% endfor %}
+            </table>
+        <br /><br />
+        Session Values:
+            <table style="text-align: center;" border="1">
+                <tr>
+                    <th>Key</th>
+                    <th>Value</th>
+                </tr>
+                <tr>
+                    <td>sid</td>
+                    <td>{{ g.flask_session['sid'] }}</td>
+                </tr>
+        {% for key in g.flask_session %}
+                <tr>
+                    <td>{{ key }}</td>
+                    <td>{{ g.flask_session[key] }}</td>
+                </tr>
+        {% endfor %}
+        </table>
+    </center>
+</body>
+</html>

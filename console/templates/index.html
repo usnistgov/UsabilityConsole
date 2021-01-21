@@ -1,0 +1,34 @@
+{% extends 'template.html' %}
+
+{% block title %}Usability Console{% endblock %}
+
+{% block css_styles %}
+td:first-child { width: 33% ;}
+th:first-child { width: 3% ;}
+
+.currentTab {
+    text-decoration:none; 
+    font-weight: bold; 
+    color: black;
+}
+{% endblock %}
+
+{% block javascript %}{% endblock %}
+
+{% block content %}
+<br />
+<br />
+<div class="extra-large"><a href="/session/create">Create New Session</a></div><br /><br />
+<div class="extra-large"><a href="/session/viewall">View Existing Sessions</a></div><br /><br />
+<hr />
+<br /> {% if debug == True %}
+<a href="/debug">Debug</a> Information:<br /><br />
+<div class="small">
+    Flask Session ID: {{ g.flask_session['sid'] }}<br />
+    User ID: [{{ g.flask_session['user_id'] }}]<br />
+    Username: [{{ g.flask_session['username'] }}]<br />
+    Current Session ID: [{{ g.flask_session['current_session_id'] }}]<br />
+    Current Session Name: [{{ g.flask_session['current_session_name'] }}]<br />
+</div>
+{% endif %}
+{% endblock %}

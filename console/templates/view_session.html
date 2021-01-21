@@ -1,0 +1,128 @@
+{% extends 'template.html' %}
+
+{% block css_styles %}
+
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+  }
+  ::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, .5);
+    -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+  }
+
+.table-container {
+    height: 100em;
+}
+
+/* Flex Table */
+table {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+  font-size:x-large; 
+  text-align: left;  
+  padding-top: 20px
+}
+table thead,
+table tbody {
+  display: block;
+}
+table tbody {
+  flex: 1;
+  overflow-y: scroll;
+}
+table tr {
+  width: 100%;
+  display: flex;
+}
+table tr td,
+table tr th {
+  display: flex;
+  flex: 1;
+  align-items:center;
+  justify-content:left;
+}
+.flex-child:nth-of-type(1) { flex-grow: 2;}
+.flex-child:nth-of-type(2) { justify-content:center;}
+.flex-child:nth-of-type(3) { justify-content:center; }
+
+body { 
+min-height: 100%;
+min-width: 100% }
+
+
+
+{% endblock %}
+
+
+{% block javascript %}
+    function confirm_delete(entry_id) {
+        entry_value = document.getElementById("entry_id_" + entry_id).innerText;
+        return confirm("Are you sure you want to delete entry '" + entry_value + "'?");
+    }
+
+    function modify_value(entry_id) {
+        entry = document.getElementById("entry_id_" + entry_id);
+        new_value = prompt("Please enter a new value for this entry", entry.innerText);
+
+        if (new_value == null) {    //user clicked cancel
+            return false;
+        }
+
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "/entry/modify/" + entry_id, true);
+        xhr.setRequestHeader('Content-Type', 'text/plain');
+        xhr.send(new_value);
+
+        entry.innerText = new_value;
+        return false;   // there is no need to reload the page
+    }
+{% endblock %}
+
+{% block title %}Usability Console - View Session{% endblock %}
+
+{% block content %}
+<head>
+  {{ fontawesome_html() }}
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+  <body>
+<div  style="margin-top: 30px; margin-left: 30px; background-color: aquamarine; width: 100%;">
+<h2 style=" float: left; overflow-wrap: break-word; width: 10%; display: inline; ">Entries for:</h2>
+<h2 style="float: left; text-align: left;  overflow-wrap: break-word; width: 40%; display: inline">{{ session_name }}</h2>
+</div>
+<div class="table-container"  style="margin-top: 30px; margin-left: 60px;">
+<table>   
+<thead>
+    <tr>
+        <th class="flex-child">Value</th>
+        <th class="flex-child" >Options</th>
+        <th class="flex-child" >Timestamp</th>
+    </tr>
+
+</thead>
+    <tbody>
+{% for entry in entries %}
+    <tr style=" margin-top: 50px; height: 40px">
+        <td class="flex-child" id="entry_id_{{ entry['entry_id'] }}" style="word-break: break-all; overflow-wrap: break-word;">{{ entry['value'] }}</td>
+        <td class="flex-child">{% if entry['can_update'] %}
+            <a href="{{ request.path }}" onclick="return modify_value({{ entry['entry_id'] }});" style="color: DarkBlue; font-size:35px;"><i class="fas fa-edit"></i></a>
+            <a href="/entry/delete/{{ entry['entry_id'] }}" onclick="return confirm_delete({{ entry['entry_id'] }});" style="color: grey; margin-left: 5%; font-size:35px;"><i class="fas fa-trash"></i></a>
+             {% endif %}</td>
+        <td class="flex-child"> {{ entry['time_created']}}</td>
+    </tr>
+{% endfor %}
+</tbody>
+</table>
+</div>
+
+ <!-- Bootstrap CSS -->
+ <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+   </body>
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends 'template.html' %}
+
+{% block title %}Usability Console - {{ g.flask_session['current_session_name'] }}{% endblock %}
+
+{% block css_styles %}
+{% endblock %}
+
+{% block javascript%}
+    function post_entry(element, value) {
+        return alert(value);
+    }
+
+    function button_click(element) {
+        /* // just for debug purposes
+        if (element.id == null || element.id == '')
+            element.id = 'id_' + Math.round(Math.random() * 100000000);
+
+        console.log(element.id);*/
+        return true;
+    }
+{% endblock %}
+
+{% block content %}
+<head>
+    <!-- Fontawsome Icons -->
+    {{ fontawesome_html() }}
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+<div class="container" style="height: 100px; width: 800px; margin-top: 100px;">
+    <h2>
+        <button onclick="window.history.back();" class="btn btn-primary btn-lg btn-block" style="font-size:42px;">
+            <i class="fas fa-arrow-left"></i>
+            <p style="font-size: xx-large; margin-left: 25px; display: inline;">GO BACK</p>
+        </button>
+    </h2>
+</div>
+
+<!-- Bootstrap CSS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+{% endblock %}

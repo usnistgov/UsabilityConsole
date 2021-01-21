@@ -1,0 +1,668 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="233ba907-ddb2-488a-996c-f03f228377df" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/test/test_dummy.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/test_dummy2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/__init__.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1PKNSZdFJrxkQPNYaklouRUjjXX" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/test" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="B:\SCM\PSCR-VAR-OperatorConsole\docs\images" />
+      <recent name="B:\SCM\PSCR-VAR-OperatorConsole\docs" />
+      <recent name="$PROJECT_DIR$/docs" />
+      <recent name="A:\SCM\PSCR-VAR-OperatorConsole\console\views" />
+      <recent name="A:\SCM\PSCR-VAR-OperatorConsole" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="B:\SCM\PSCR-VAR-OperatorConsole\test" />
+      <recent name="A:\SCM\PSCR-VAR-OperatorConsole\console\templates" />
+      <recent name="A:\SCM\PSCR-VAR-OperatorConsole\Documentation" />
+      <recent name="A:\SCM\PSCR-VAR-OperatorConsole\console\db" />
+      <recent name="A:\SCM\PSCR-VAR-OperatorConsole\console\static" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python tests.Unittests in test">
+    <configuration name="__init__ (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="PSCR-VAR-OperatorConsole" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/console/security" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/console/security/__init__.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="__init__" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="PSCR-VAR-OperatorConsole" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/console/db" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/console/db/__init__.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="runserver" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="PSCR-VAR-OperatorConsole" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/runserver.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for test.test_dummy.DummyTest" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="PSCR-VAR-OperatorConsole" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test.test_dummy.DummyTest&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests in test" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="PSCR-VAR-OperatorConsole" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/test&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.__init__ (1)" />
+      <item itemvalue="Python.__init__" />
+      <item itemvalue="Python.runserver" />
+      <item itemvalue="Python tests.Unittests in test" />
+      <item itemvalue="Python tests.Unittests for test.test_dummy.DummyTest" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.Unittests in test" />
+        <item itemvalue="Python tests.Unittests for test.test_dummy.DummyTest" />
+        <item itemvalue="Python.runserver" />
+        <item itemvalue="Python.__init__" />
+        <item itemvalue="Python.__init__ (1)" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="233ba907-ddb2-488a-996c-f03f228377df" name="Default Changelist" comment="" />
+      <created>1540240918499</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1540240918499</updated>
+    </task>
+    <task id="LOCAL-00097" summary="code cleanup">
+      <created>1587668156292</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1587668156292</updated>
+    </task>
+    <task id="LOCAL-00098" summary="code cleanup">
+      <created>1587668255222</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1587668255222</updated>
+    </task>
+    <task id="LOCAL-00099" summary="documentation updates">
+      <created>1587754576554</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1587754576558</updated>
+    </task>
+    <task id="LOCAL-00100" summary="documentation updates, database updates, console view updates">
+      <created>1588006661385</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1588006661386</updated>
+    </task>
+    <task id="LOCAL-00101" summary="removing remnants from db-color removal">
+      <created>1588006719944</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1588006719945</updated>
+    </task>
+    <task id="LOCAL-00102" summary="removing remnants from db-color removal">
+      <created>1588006773543</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1588006773543</updated>
+    </task>
+    <task id="LOCAL-00103" summary="removing remnants from db-color removal">
+      <created>1588006863081</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1588006863081</updated>
+    </task>
+    <task id="LOCAL-00104" summary="minor code cleanup">
+      <created>1588006966446</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1588006966446</updated>
+    </task>
+    <task id="LOCAL-00105" summary="dynamic button loading">
+      <created>1588012005135</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1588012005136</updated>
+    </task>
+    <task id="LOCAL-00106" summary="dynamic button loading">
+      <created>1588020692026</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1588020692027</updated>
+    </task>
+    <task id="LOCAL-00107" summary="freetext submission progress">
+      <created>1588364330401</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1588364330401</updated>
+    </task>
+    <task id="LOCAL-00108" summary="sql modifications">
+      <created>1588366320612</created>
+      <option name="number" value="00108" />
+      <option name="presentableId" value="LOCAL-00108" />
+      <option name="project" value="LOCAL" />
+      <updated>1588366320612</updated>
+    </task>
+    <task id="LOCAL-00109" summary="correctly clearing cache / session data on first start">
+      <created>1588690223209</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1588690223210</updated>
+    </task>
+    <task id="LOCAL-00110" summary="add freetext / entry from console">
+      <created>1588695001241</created>
+      <option name="number" value="00110" />
+      <option name="presentableId" value="LOCAL-00110" />
+      <option name="project" value="LOCAL" />
+      <updated>1588695001241</updated>
+    </task>
+    <task id="LOCAL-00111" summary="minor updates">
+      <created>1588713363296</created>
+      <option name="number" value="00111" />
+      <option name="presentableId" value="LOCAL-00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1588713363296</updated>
+    </task>
+    <task id="LOCAL-00112" summary="updating documentation">
+      <created>1588783320630</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1588783320631</updated>
+    </task>
+    <task id="LOCAL-00113" summary="finishing alerts (and related documentation)">
+      <created>1588791221521</created>
+      <option name="number" value="00113" />
+      <option name="presentableId" value="LOCAL-00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1588791221521</updated>
+    </task>
+    <task id="LOCAL-00114" summary="updating TODO list">
+      <created>1588791259920</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1588791259920</updated>
+    </task>
+    <task id="LOCAL-00115" summary="updating TODO list">
+      <created>1588791313970</created>
+      <option name="number" value="00115" />
+      <option name="presentableId" value="LOCAL-00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1588791313970</updated>
+    </task>
+    <task id="LOCAL-00116" summary="updating TODO list and documentation">
+      <created>1588791456485</created>
+      <option name="number" value="00116" />
+      <option name="presentableId" value="LOCAL-00116" />
+      <option name="project" value="LOCAL" />
+      <updated>1588791456485</updated>
+    </task>
+    <task id="LOCAL-00117" summary="updating TODO list and documentation">
+      <created>1588791555495</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1588791555495</updated>
+    </task>
+    <task id="LOCAL-00118" summary="updating TODO list and documentation">
+      <created>1588791768275</created>
+      <option name="number" value="00118" />
+      <option name="presentableId" value="LOCAL-00118" />
+      <option name="project" value="LOCAL" />
+      <updated>1588791768275</updated>
+    </task>
+    <task id="LOCAL-00119" summary="fixing default cache timeout">
+      <created>1588956564795</created>
+      <option name="number" value="00119" />
+      <option name="presentableId" value="LOCAL-00119" />
+      <option name="project" value="LOCAL" />
+      <updated>1588956564795</updated>
+    </task>
+    <task id="LOCAL-00120" summary="changing the order entries and sessions are displayed, descending with most recent at the top">
+      <created>1588956843371</created>
+      <option name="number" value="00120" />
+      <option name="presentableId" value="LOCAL-00120" />
+      <option name="project" value="LOCAL" />
+      <updated>1588956843371</updated>
+    </task>
+    <task id="LOCAL-00121" summary="cleaning up some loose ends">
+      <created>1588956936058</created>
+      <option name="number" value="00121" />
+      <option name="presentableId" value="LOCAL-00121" />
+      <option name="project" value="LOCAL" />
+      <updated>1588956936059</updated>
+    </task>
+    <task id="LOCAL-00122" summary="trivial updates">
+      <created>1588963068215</created>
+      <option name="number" value="00122" />
+      <option name="presentableId" value="LOCAL-00122" />
+      <option name="project" value="LOCAL" />
+      <updated>1588963068215</updated>
+    </task>
+    <task id="LOCAL-00123" summary="trivial updates">
+      <created>1589397188352</created>
+      <option name="number" value="00123" />
+      <option name="presentableId" value="LOCAL-00123" />
+      <option name="project" value="LOCAL" />
+      <updated>1589397188352</updated>
+    </task>
+    <task id="LOCAL-00124" summary="separating default settings/data flag to two separate flags: CLEAR_SESSION_ON_START and REMOVE_DATABASE_ON_START">
+      <created>1589397798888</created>
+      <option name="number" value="00124" />
+      <option name="presentableId" value="LOCAL-00124" />
+      <option name="project" value="LOCAL" />
+      <updated>1589397798888</updated>
+    </task>
+    <task id="LOCAL-00125" summary="pushing usability-based updates">
+      <created>1589398286967</created>
+      <option name="number" value="00125" />
+      <option name="presentableId" value="LOCAL-00125" />
+      <option name="project" value="LOCAL" />
+      <updated>1589398286967</updated>
+    </task>
+    <task id="LOCAL-00126" summary="pushing usability-based updates">
+      <created>1589398455127</created>
+      <option name="number" value="00126" />
+      <option name="presentableId" value="LOCAL-00126" />
+      <option name="project" value="LOCAL" />
+      <updated>1589398455128</updated>
+    </task>
+    <task id="LOCAL-00127" summary="updating install and run instructions">
+      <created>1589402315438</created>
+      <option name="number" value="00127" />
+      <option name="presentableId" value="LOCAL-00127" />
+      <option name="project" value="LOCAL" />
+      <updated>1589402315438</updated>
+    </task>
+    <task id="LOCAL-00128" summary="resizing image">
+      <created>1589402394401</created>
+      <option name="number" value="00128" />
+      <option name="presentableId" value="LOCAL-00128" />
+      <option name="project" value="LOCAL" />
+      <updated>1589402394401</updated>
+    </task>
+    <task id="LOCAL-00129" summary="resizing image">
+      <created>1589402878331</created>
+      <option name="number" value="00129" />
+      <option name="presentableId" value="LOCAL-00129" />
+      <option name="project" value="LOCAL" />
+      <updated>1589402878331</updated>
+    </task>
+    <task id="LOCAL-00130" summary="reformating images">
+      <created>1589403070165</created>
+      <option name="number" value="00130" />
+      <option name="presentableId" value="LOCAL-00130" />
+      <option name="project" value="LOCAL" />
+      <updated>1589403070165</updated>
+    </task>
+    <task id="LOCAL-00131" summary="updating execution instructions to include emulating a tablet/mobile device">
+      <created>1589471543336</created>
+      <option name="number" value="00131" />
+      <option name="presentableId" value="LOCAL-00131" />
+      <option name="project" value="LOCAL" />
+      <updated>1589471543336</updated>
+    </task>
+    <task id="LOCAL-00132" summary="updating execution instructions to include emulating a tablet/mobile device">
+      <created>1589471702815</created>
+      <option name="number" value="00132" />
+      <option name="presentableId" value="LOCAL-00132" />
+      <option name="project" value="LOCAL" />
+      <updated>1589471702815</updated>
+    </task>
+    <task id="LOCAL-00133" summary="updating execution instructions to include emulating a tablet/mobile device">
+      <created>1589471894712</created>
+      <option name="number" value="00133" />
+      <option name="presentableId" value="LOCAL-00133" />
+      <option name="project" value="LOCAL" />
+      <updated>1589471894712</updated>
+    </task>
+    <task id="LOCAL-00134" summary="updating execution instructions to include emulating a tablet/mobile device">
+      <created>1589472662354</created>
+      <option name="number" value="00134" />
+      <option name="presentableId" value="LOCAL-00134" />
+      <option name="project" value="LOCAL" />
+      <updated>1589472662354</updated>
+    </task>
+    <task id="LOCAL-00135" summary="updating execution instructions to include emulating a tablet/mobile device">
+      <created>1589479764220</created>
+      <option name="number" value="00135" />
+      <option name="presentableId" value="LOCAL-00135" />
+      <option name="project" value="LOCAL" />
+      <updated>1589479764220</updated>
+    </task>
+    <task id="LOCAL-00136" summary="updating execution instructions to include emulating a tablet/mobile device">
+      <created>1589486525281</created>
+      <option name="number" value="00136" />
+      <option name="presentableId" value="LOCAL-00136" />
+      <option name="project" value="LOCAL" />
+      <updated>1589486525281</updated>
+    </task>
+    <task id="LOCAL-00137" summary="sync push">
+      <created>1594401182668</created>
+      <option name="number" value="00137" />
+      <option name="presentableId" value="LOCAL-00137" />
+      <option name="project" value="LOCAL" />
+      <updated>1594401182668</updated>
+    </task>
+    <task id="LOCAL-00138" summary="fixing external event posting">
+      <created>1594759004646</created>
+      <option name="number" value="00138" />
+      <option name="presentableId" value="LOCAL-00138" />
+      <option name="project" value="LOCAL" />
+      <updated>1594759004646</updated>
+    </task>
+    <task id="LOCAL-00139" summary="removing duplicate code">
+      <created>1594759355936</created>
+      <option name="number" value="00139" />
+      <option name="presentableId" value="LOCAL-00139" />
+      <option name="project" value="LOCAL" />
+      <updated>1594759355936</updated>
+    </task>
+    <task id="LOCAL-00140" summary="requiring external clients to manually create a new session and refer to the session_id on all other external-client calls.">
+      <created>1594823691280</created>
+      <option name="number" value="00140" />
+      <option name="presentableId" value="LOCAL-00140" />
+      <option name="project" value="LOCAL" />
+      <updated>1594823691280</updated>
+    </task>
+    <task id="LOCAL-00141" summary="update to external alerts">
+      <created>1595946734657</created>
+      <option name="number" value="00141" />
+      <option name="presentableId" value="LOCAL-00141" />
+      <option name="project" value="LOCAL" />
+      <updated>1595946734657</updated>
+    </task>
+    <task id="LOCAL-00142" summary="update to adding entries">
+      <created>1597084442070</created>
+      <option name="number" value="00142" />
+      <option name="presentableId" value="LOCAL-00142" />
+      <option name="project" value="LOCAL" />
+      <updated>1597084442070</updated>
+    </task>
+    <task id="LOCAL-00143" summary="update to adding entries">
+      <created>1597084659373</created>
+      <option name="number" value="00143" />
+      <option name="presentableId" value="LOCAL-00143" />
+      <option name="project" value="LOCAL" />
+      <updated>1597084659373</updated>
+    </task>
+    <task id="LOCAL-00144" summary="updating TODO">
+      <created>1597258116676</created>
+      <option name="number" value="00144" />
+      <option name="presentableId" value="LOCAL-00144" />
+      <option name="project" value="LOCAL" />
+      <updated>1597258116676</updated>
+    </task>
+    <task id="LOCAL-00145" summary="initial test infrastructure">
+      <created>1597258294445</created>
+      <option name="number" value="00145" />
+      <option name="presentableId" value="LOCAL-00145" />
+      <option name="project" value="LOCAL" />
+      <updated>1597258294446</updated>
+    </task>
+    <option name="localTasksCounter" value="146" />
+    <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.js" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="correctly clearing cache / session data on first start" />
+    <MESSAGE value="add freetext / entry from console" />
+    <MESSAGE value="minor updates" />
+    <MESSAGE value="updating documentation" />
+    <MESSAGE value="finishing alerts (and related documentation)" />
+    <MESSAGE value="updating TODO list" />
+    <MESSAGE value="updating TODO list and documentation" />
+    <MESSAGE value="fixing default cache timeout" />
+    <MESSAGE value="changing the order entries and sessions are displayed, descending with most recent at the top" />
+    <MESSAGE value="cleaning up some loose ends" />
+    <MESSAGE value="trivial updates" />
+    <MESSAGE value="separating default settings/data flag to two separate flags: CLEAR_SESSION_ON_START and REMOVE_DATABASE_ON_START" />
+    <MESSAGE value="pushing usability-based updates" />
+    <MESSAGE value="updating install and run instructions" />
+    <MESSAGE value="resizing image" />
+    <MESSAGE value="reformating images" />
+    <MESSAGE value="updating execution instructions to include emulating a tablet/mobile device" />
+    <MESSAGE value="sync push" />
+    <MESSAGE value="fixing external event posting" />
+    <MESSAGE value="removing duplicate code" />
+    <MESSAGE value="requiring external clients to manually create a new session and refer to the session_id on all other external-client calls." />
+    <MESSAGE value="update to external alerts" />
+    <MESSAGE value="update to adding entries" />
+    <MESSAGE value="updating TODO" />
+    <MESSAGE value="initial test infrastructure" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial test infrastructure" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2334" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597258407431">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2334" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1597258407431" />
+    <state x="2537" y="103" key="CommitChangelistDialog2" timestamp="1597258293580">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="617" y="103" key="CommitChangelistDialog2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1594824320627" />
+    <state x="2537" y="103" key="CommitChangelistDialog2/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1597258293580" />
+    <state x="2660" y="278" key="FileChooserDialogImpl" timestamp="1589576323475">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2660" y="278" key="FileChooserDialogImpl/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1589576323475" />
+    <state width="1899" height="267" key="GridCell.Tab.0.bottom" timestamp="1597259101905">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="267" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1597259101905" />
+    <state width="1899" height="267" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1597084855446" />
+    <state width="1899" height="267" key="GridCell.Tab.0.center" timestamp="1597259101905">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="267" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1597259101905" />
+    <state width="1899" height="267" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1597084855446" />
+    <state width="1899" height="267" key="GridCell.Tab.0.left" timestamp="1597259101904">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="267" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1597259101904" />
+    <state width="1899" height="267" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1597084855446" />
+    <state width="1899" height="267" key="GridCell.Tab.0.right" timestamp="1597259101905">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="267" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1597259101905" />
+    <state width="1899" height="267" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1597084855446" />
+    <state width="1899" height="348" key="GridCell.Tab.1.bottom" timestamp="1588713374557">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="348" key="GridCell.Tab.1.bottom/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1588713374557" />
+    <state width="1899" height="348" key="GridCell.Tab.1.center" timestamp="1588713374557">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="348" key="GridCell.Tab.1.center/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1588713374557" />
+    <state width="1899" height="348" key="GridCell.Tab.1.left" timestamp="1588713374557">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="348" key="GridCell.Tab.1.left/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1588713374557" />
+    <state width="1899" height="348" key="GridCell.Tab.1.right" timestamp="1588713374557">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="348" key="GridCell.Tab.1.right/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1588713374557" />
+    <state x="463" y="165" key="SettingsEditor" timestamp="1597258465670">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="463" y="165" key="SettingsEditor/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1597258465670" />
+    <state x="2383" y="165" key="SettingsEditor/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1589576438314" />
+    <state x="2472" y="256" key="Vcs.Push.Dialog.v2" timestamp="1597258296010">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="256" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1594823694311" />
+    <state x="2472" y="256" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1597258296010" />
+    <state x="668" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1588953190398">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="668" y="347" key="com.intellij.ide.util.TipDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588953190398" />
+    <state x="771" y="439" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1594668768530">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="771" y="439" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1594668768530" />
+    <state x="2691" y="439" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1589400495498" />
+    <state x="719" y="389" key="git4idea.merge.GitPullDialog" timestamp="1591800909916">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="719" y="389" key="git4idea.merge.GitPullDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1591800909916" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="g" language="Python" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="watch">
+      <expression>
+        <expression-string>g</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+</project>

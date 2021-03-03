@@ -72,7 +72,7 @@ CREATE TABLE IF NOT EXISTS entries (
     time_created DATETIME DEFAULT (datetime('now','localtime')),
     value TEXT NOT NULL,
     entry_option_id INTEGER,
-    category_id INTEGER,
+    category_id INTEGER DEFAULT 4,
     enabled BOOLEAN DEFAULT 1,
     FOREIGN KEY (session_id) REFERENCES sessions(session_id),
     FOREIGN KEY (creator_id) REFERENCES users(user_id),

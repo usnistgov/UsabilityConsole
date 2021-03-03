@@ -49,7 +49,7 @@ CREATE TABLE IF NOT EXISTS sessions (
     session_id INTEGER PRIMARY KEY AUTOINCREMENT,
     creator_id INTEGER NOT NULL,
     name TEXT NOT NULL,
-    time_created DATETIME DEFAULT CURRENT_TIMESTAMP,
+    time_created DATETIME DEFAULT (datetime('now','localtime')),
     enabled BOOLEAN DEFAULT 1,
     FOREIGN KEY (creator_id) REFERENCES users(user_id)
 );
@@ -58,7 +58,7 @@ CREATE TABLE IF NOT EXISTS alerts (
     alert_id INTEGER PRIMARY KEY AUTOINCREMENT,
     session_id INTEGER NOT NULL,
     creator_id INTEGER NOT NULL,
-    time_created DATETIME DEFAULT CURRENT_TIMESTAMP,
+    time_created DATETIME DEFAULT (datetime('now','localtime')),
     value TEXT NOT NULL,
     enabled BOOLEAN DEFAULT 1,
     FOREIGN KEY (session_id) REFERENCES sessions(session_id),
@@ -69,7 +69,7 @@ CREATE TABLE IF NOT EXISTS entries (
     entry_id INTEGER PRIMARY KEY AUTOINCREMENT,
     session_id INTEGER NOT NULL,
     creator_id INTEGER NOT NULL,
-    time_created DATETIME DEFAULT CURRENT_TIMESTAMP,
+    time_created DATETIME DEFAULT (datetime('now','localtime')),
     value TEXT NOT NULL,
     entry_option_id INTEGER,
     category_id INTEGER,

@@ -50,6 +50,22 @@ def update_settings():
     db.update_user_last_name(user_id, last_name)
     db.update_user_email_address(user_id, email)
 
+    answer1 = request.form['answer1']
+    answer2 = request.form['answer2']
+    answer3 = request.form['answer3']
+    if (answer1 or answer2 or answer3): 
+        question1 = request.form['question1']
+        question2 = request.form['question2']
+        question3 = request.form['question3']
+
+        if len([question1, question2, question3]) != len(list(set([question1, question2, question3]))):
+            flash('Questions are the same', 'danger')
+            return redirect_to_referrer()
+        db.delete_user_answers(user_id)
+        db.create_answer(user_id,question1,answer1)
+        db.create_answer(user_id,question2,answer2)
+        db.create_answer(user_id,question3,answer3)
+
     refresh_cache()
 
     password = request.form['password']
@@ -62,13 +78,17 @@ def update_settings():
             flash('There was an issue; passwords were not updated.', 'danger')
             return redirect('/settings')
 
-    return render_template('user_settings.html', success_message='Settings updated successfully')
+    questions = db.list_questions()
+    return render_template('user_settings.html', success_message='Settings updated successfully', questions=questions)
 
 
-@app.route('/settings')
+@app.route('/settings', methods=['GET'])
 def settings():
     if not is_logged_in():      # REDIRECT TO LOGIN
         flash('You must be logged in to view this.', 'danger')
         return redirect('/error')
 
-    return render_template('user_settings.html')
+    db = Database()
+    questions = db.list_questions()
+
+    return render_template('user_settings.html', questions=questions)

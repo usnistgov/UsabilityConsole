@@ -421,6 +421,9 @@ class Database:
     def create_answer(self, user_id, question_id, answer):
         return self.update("INSERT INTO security_answers (user_id, question_id, answer) VALUES (?, ?, ?)", user_id, question_id, answer)
 
+    def delete_user_answers(self, user_id):
+        return self.update("DELETE FROM security_answers WHERE user_id =? ", user_id)
+
 if __name__ == "__main__":
     db = Database()
 

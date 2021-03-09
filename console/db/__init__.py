@@ -142,7 +142,7 @@ class Database:
 
         if user_id is None:
             return None
-
+        
         user_id = user_id["user_id"]
         return self.get_user_by_id(user_id)
 

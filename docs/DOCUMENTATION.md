@@ -171,6 +171,7 @@ endpoint's purpose.
 |:---:|:---:|:---|
 |`/ext/<api_key>`| POST | Post event(s) to the current session |
 |`/ext/<api_key>/new_session`| POST | Forces the console to establish a new session |
+|`/ext/<api_key>/new_session/<session_name>`| POST | Forces the console to establish a new session named with a given name |
 |`/ext/<api_key>/alerts`| GET | Gets all alerts as a list |
 
 More information is available in [Examples for External Clients](./EXAMPLES.md).

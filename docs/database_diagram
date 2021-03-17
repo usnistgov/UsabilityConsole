@@ -62,6 +62,18 @@ Table categories {
   enabled boolean
 }
 
+Table security_questions {
+  question_id int PK
+  question varchar
+}
+
+Table security_answers {
+  answer_id int PK
+  answer varchar
+  question_id int
+  user_id int
+}
+
 
 Ref: sessions.creator_id > users.user_id
 Ref: alerts.session_id > sessions.session_id
@@ -73,3 +85,5 @@ Ref: entries.category_id > categories.category_id
 Ref: entry_options.parent_id > entry_options.entry_option_id
 Ref: entry_options.category_id > categories.category_id
 Ref: users.role_id > roles.role_id
+Ref: security_answers.question_id > security_questions.question_id
+Ref: security_answers.user_id > users.user_id

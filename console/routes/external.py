@@ -39,6 +39,7 @@ def ext_post_event(api_key, session_id):
     db = Database()
     user = db.get_user_by_api_key(api_key)
 
+
     if user is None:
         return "Provided API key ('{}') is not associated with any registered user".format(api_key), HTTPStatus.UNAUTHORIZED.value
 
@@ -86,6 +87,27 @@ def ext_create_new_session(api_key):
     set_current_session(session_id, session_name)
 
     return "New Session ID: '{}'".format(session_id)
+
+@app.route('/ext/<api_key>/new_session/<session_name>', methods=['POST'])
+def ext_create_new_session_name(api_key, session_name):     
+    logging.debug("EXTERNAL: Create new Session with name")
+
+    db = Database()
+    user = db.get_user_by_api_key(api_key)
+
+    if user is None:
+        return "Provided API key ('{}') is not associated with any registered user".format(api_key), HTTPStatus.UNAUTHORIZED.value
+
+    if db.does_session_name_exist(session_name):
+        return "Provided session name ('{}') already exists".format(session_name), HTTPStatus.UNAUTHORIZED.value
+
+    logging.debug("Creating new session: %s (userid: %s)", session_name, user['user_id'])
+    session_id = db.create_session(session_name, user['user_id'])
+    logging.debug("New session id: %s", session_id)
+    set_current_session(session_id, session_name)
+
+    return "New Session ID: '{}'".format(session_id)
+
 
 
 @app.route('/ext/<api_key>/<session_id>/alerts', methods=['GET'])

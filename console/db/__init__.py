@@ -142,7 +142,7 @@ class Database:
 
         if user_id is None:
             return None
-
+        
         user_id = user_id["user_id"]
         return self.get_user_by_id(user_id)
 
@@ -274,6 +274,9 @@ class Database:
 
     def get_entries_for_session(self, session_id):
         return self.fetchall("SELECT * FROM entries WHERE session_id=? AND enabled=1 ORDER BY entry_id DESC, time_created DESC", session_id)
+
+    def get_internal_entries_for_session(self, session_id):
+        return self.fetchall("SELECT * FROM entries WHERE session_id=? AND enabled=1 AND category_id!=5 ORDER BY entry_id DESC, time_created DESC", session_id)
 
     def get_entry(self, entry_id):
         return self.fetchone("SELECT * FROM entries WHERE entry_id=?", entry_id)
@@ -417,6 +420,9 @@ class Database:
 
     def create_answer(self, user_id, question_id, answer):
         return self.update("INSERT INTO security_answers (user_id, question_id, answer) VALUES (?, ?, ?)", user_id, question_id, answer)
+
+    def delete_user_answers(self, user_id):
+        return self.update("DELETE FROM security_answers WHERE user_id =? ", user_id)
 
 if __name__ == "__main__":
     db = Database()

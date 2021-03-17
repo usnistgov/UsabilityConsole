@@ -128,7 +128,8 @@ def console():
     for db_entry in db.get_entries_for_session(session_id):
         dates += [getDate(db_entry['time_created'])]
     dates = list(sorted(set(dates), key=dates.index))
-    data = getData(dates, db.get_entries_for_session(session_id))
+    data = getData(dates, db.get_internal_entries_for_session(session_id))
+
     return render_template('console.html', actions_ul=actions_ul, actions_ur=actions_ur, actions_ll=actions_ll, data=data)
 
 def getData(dates, entries):

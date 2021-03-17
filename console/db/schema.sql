@@ -11,6 +11,8 @@ DROP TABLE IF EXISTS alerts;
 DROP TABLE IF EXISTS entries;
 DROP TABLE IF EXISTS categories;
 DROP TABLE IF EXISTS entry_options;
+DROP TABLE IF EXISTS security_questions;
+DROP TABLE IF EXISTS security_answers;
 
 /***********************************************************************************************************************
     CREATE TABLES / REFERENCES

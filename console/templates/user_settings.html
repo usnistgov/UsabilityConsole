@@ -98,10 +98,10 @@
         <td align="left">{{ g.flask_session['api_key'] }}</td>
     </tr>
 
-    <tr> <td><h3><u>security questions</u></security></h3></td></tr>
+    <tr> <td style="display: inline;"><h3><u>security questions</u></security></h3></td></tr>
 
     <tr>
-        <td><b>Security Question 1*</b>  :</td>
+        <td><b>Question 1*</b>  :</td>
         <td class="left">
         <select name="question1" method="GET" action="/" style="width: 100%;">
             {% for question in questions %}
@@ -116,9 +116,9 @@
         <td><input type="text" name="answer1"  required/></td>
     </tr>
     <tr>
-        <td><b>Security Question 2*</b>  :</td>
+        <td><b>Question 2*</b>  :</td>
         <td class="left">  <select name="question2" method="GET" action="/" style="width: 100%;">
-            {% for question in questions %}
+            {% for question in questions[:-1] %}
             <option value= "{{question['question_id']}}" SELECTED>
                 <p style="word-wrap: break-word; background-color: sienna;" >{{question['question']}}</p></option>"
             {% endfor %}
@@ -131,9 +131,9 @@
         <td class="left"><input type="text" name="answer2"  required/></td>
     </tr>
     <tr>
-        <td><b>Security Question 3*</b>  :</td>
+        <td><b>Question 3*</b>  :</td>
         <td class="left">  <select name="question3" method="GET" action="/" style="width: 100%;">
-            {% for question in questions %}
+            {% for question in questions[:-2] %}
             <option value= "{{question['question_id']}}" SELECTED>
                 <p style="word-wrap: break-word; background-color: sienna;" >{{question['question']}}</p></option>"
             {% endfor %}

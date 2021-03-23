@@ -49,8 +49,8 @@ justify-content:left;
 .flex-child:nth-of-type(1) {justify-content:center; padding-right:30px }
 .flex-child:nth-of-type(2) { flex-grow: 3; }
 .flex-child:nth-of-type(3) { justify-content:center; }
-.flex-child:nth-of-type(4) { flex-grow: 2; justify-content:center;}
-.flex-child:nth-of-type(5) { flex-grow: 2; justify-content:center;}
+.flex-child:nth-of-type(4) { flex-grow: 2; padding-left:30px}
+.flex-child:nth-of-type(5) { flex-grow: 2; padding-left:30px}
 
 body { 
 min-height: 100%;
@@ -80,11 +80,11 @@ min-width: 100% }
 
 <br />
 {{ g.message }}
-<div class="table-container"  style="margin-top: 30px; margin-left: 60px;">
+<div class="table-container"  style="margin-top: 30px;">
   <table>   
   <thead>
       <tr>
-          <th class="flex-child">Session ID</th>
+          <th class="flex-child">ID</th>
           <th class="flex-child" >Name</th>
           <th class="flex-child" >Options</th>
           <th class="flex-child" >Time created</th>

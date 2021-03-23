@@ -218,7 +218,7 @@ def view_sessions():
         if (last_modified != None): 
             session['last_modified'] = last_modified
         else: 
-            session['last_modified'] = 'NAN'
+            session['last_modified'] = ''
         sessions.append(session)
     return render_template('view_sessions.html', sessions=sessions)
 

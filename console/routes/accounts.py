@@ -28,13 +28,13 @@ def register():
         answer3 = request.form['answer3']
 
         if password != password2:
-            flash('Questions are the same', 'danger')
+            flash('Passwords are not the same', 'danger')
             return redirect_to_referrer()
 
         db = Database()
 
         if db.does_username_exist(username):
-            flash('Questions are the same', 'danger')
+            flash('Username already exists', 'danger')
             return redirect_to_referrer()
         if len([question1, question2, question3]) != len(list(set([question1, question2, question3]))):
             flash('Questions are the same', 'danger')
@@ -61,7 +61,9 @@ def register():
         for key in user.keys():
             flask_session[key] = user[key]
 
-    return render_template('user_settings.html', success_message='Account created successfully')
+        questions = db.list_questions()
+
+    return render_template('user_settings.html', questions=questions, success_message='Account created successfully')
 
 @app.route('/logout')
 def logout():
